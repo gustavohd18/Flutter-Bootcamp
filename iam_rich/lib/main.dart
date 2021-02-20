@@ -4,7 +4,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blueGrey[900],
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
