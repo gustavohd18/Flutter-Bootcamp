@@ -32,11 +32,13 @@ class _MyHomePageState extends State<MyHomePage> {
     Transaction(
         id: 't2', title: 'New videogame', amount: 79.99, date: DateTime.now())
   ];
-  String titleInput, amountInput;
+
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
 
   void values() {
-    print(titleInput);
-    print(amountInput);
+    print(titleController.text);
+    print(amountController.text);
   }
 
   @override
@@ -67,11 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   TextField(
                     decoration: InputDecoration(labelText: "title"),
-                    onChanged: (value) => titleInput = value,
+                    controller: titleController,
                   ),
                   TextField(
                     decoration: InputDecoration(labelText: "amount"),
-                    onChanged: (value) => amountInput = value,
+                     controller: amountController
                   ),
                   OutlinedButton(
                       onPressed: values,
